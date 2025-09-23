@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Header from '@/components/Header';
 import ProductCard from '@/components/ProductCard';
-import ProductDetail from '@/components/ProductDetail';
 import Cart from '@/components/Cart';
 import { useCart } from '@/contexts/CartContext';
 import teeFront from '@/assets/tee-front.png';
@@ -38,17 +37,8 @@ const PRODUCTS: Product[] = [
 ];
 
 const Shop = () => {
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [showCart, setShowCart] = useState(false);
   const { state } = useCart();
-
-  const handleViewProduct = (product: Product) => {
-    setSelectedProduct(product);
-  };
-
-  const handleCloseProduct = () => {
-    setSelectedProduct(null);
-  };
 
   const handleCartClick = () => {
     setShowCart(true);
@@ -82,14 +72,6 @@ const Shop = () => {
             <button className="text-sm font-medium text-foreground border-b-2 border-primary pb-2">
               Tees
             </button>
-            <button className="text-sm font-medium text-muted-foreground hover:text-foreground pb-2">
-              Hoodies
-              <span className="ml-2 text-xs">Coming Soon</span>
-            </button>
-            <button className="text-sm font-medium text-muted-foreground hover:text-foreground pb-2">
-              Accessories
-              <span className="ml-2 text-xs">Coming Soon</span>
-            </button>
           </div>
         </div>
 
@@ -99,7 +81,6 @@ const Shop = () => {
             <ProductCard
               key={product.id}
               product={product}
-              onViewProduct={handleViewProduct}
             />
           ))}
         </div>
@@ -114,14 +95,6 @@ const Shop = () => {
           </div>
         )}
       </main>
-
-      {/* Product Detail Modal */}
-      {selectedProduct && (
-        <ProductDetail
-          product={selectedProduct}
-          onClose={handleCloseProduct}
-        />
-      )}
 
       {/* Cart Modal */}
       {showCart && (

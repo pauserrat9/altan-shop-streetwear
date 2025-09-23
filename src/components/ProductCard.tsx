@@ -1,5 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 
 interface Product {
   id: string;
@@ -15,10 +16,14 @@ interface Product {
 
 interface ProductCardProps {
   product: Product;
-  onViewProduct: (product: Product) => void;
 }
 
-const ProductCard = ({ product, onViewProduct }: ProductCardProps) => {
+const ProductCard = ({ product }: ProductCardProps) => {
+  const navigate = useNavigate();
+
+  const handleViewProduct = () => {
+    navigate(`/product/${product.id}`);
+  };
   return (
     <Card className="group cursor-pointer overflow-hidden border-border/50 hover:shadow-subtle transition-all duration-300">
       <CardContent className="p-0">
@@ -66,7 +71,7 @@ const ProductCard = ({ product, onViewProduct }: ProductCardProps) => {
             <Button
               variant="outline"
               size="sm"
-              onClick={() => onViewProduct(product)}
+              onClick={handleViewProduct}
               className="hover:bg-primary hover:text-primary-foreground"
             >
               View

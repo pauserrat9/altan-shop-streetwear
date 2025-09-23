@@ -14,8 +14,6 @@ const Header = ({ cartItemCount = 0, onCartClick }: HeaderProps) => {
   const navItems = [
     { id: 'shop', label: 'Shop', href: '/', active: true },
     { id: 'tees', label: 'Tees', href: '/tees', active: true },
-    { id: 'hoodies', label: 'Hoodies', href: '#', active: false, comingSoon: true },
-    { id: 'accessories', label: 'Accessories', href: '#', active: false, comingSoon: true },
     { id: 'platform', label: 'Platform', href: 'https://altan.ai', external: true },
   ];
 
@@ -40,24 +38,12 @@ const Header = ({ cartItemCount = 0, onCartClick }: HeaderProps) => {
               target={item.external ? '_blank' : undefined}
               rel={item.external ? 'noopener noreferrer' : undefined}
               className={`text-sm font-medium transition-colors hover:text-primary ${
-                item.active && !item.comingSoon
+                item.active
                   ? 'text-foreground'
-                  : item.comingSoon
-                  ? 'text-muted-foreground cursor-not-allowed'
                   : 'text-muted-foreground hover:text-foreground'
               }`}
-              onClick={(e) => {
-                if (item.comingSoon) {
-                  e.preventDefault();
-                }
-              }}
             >
               {item.label}
-              {item.comingSoon && (
-                <span className="ml-2 text-xs text-muted-foreground">
-                  Coming Soon
-                </span>
-              )}
             </a>
           ))}
         </nav>
