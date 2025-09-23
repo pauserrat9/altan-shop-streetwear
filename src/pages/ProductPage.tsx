@@ -11,6 +11,9 @@ import { useCart } from '@/contexts/CartContext';
 import { useToast } from '@/hooks/use-toast';
 import teeFront from '@/assets/tee-front.png';
 import teeBack from '@/assets/tee-back.png';
+import retroWaveTee from '@/assets/retro-wave-tee.png';
+import starScriptTee from '@/assets/star-script-tee.png';
+import timelessUtilityTee from '@/assets/timeless-utility-tee.png';
 
 interface Product {
   id: string;
@@ -41,6 +44,54 @@ const PRODUCTS: { [key: string]: Product } = {
       back: teeBack,
     },
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    category: 'Tees',
+    inStock: true,
+    details: 'Made from premium cotton with an oversized fit, this tee is designed for comfort and style. Features high-quality screen printing that maintains its vibrancy wash after wash.',
+    care: 'Machine wash cold with like colors. Tumble dry low. Do not bleach. Iron inside out on low heat.',
+  },
+  'retro-wave-tee': {
+    id: 'retro-wave-tee',
+    name: 'Retro Wave Tee',
+    price: 29.99,
+    currency: '€',
+    description: 'Dive into the future with a nostalgic twist. The \'AltanLabs Retro Wave Tee\' features a vibrant, retro-futuristic logo and inspiring text that speaks to the evolution of ideas. Crafted for those who build, endure, and imagine beyond the ordinary, this tee is a testament to progress and timeless utility.',
+    images: {
+      front: retroWaveTee,
+      back: retroWaveTee,
+    },
+    sizes: ['S', 'M', 'L', 'XL'],
+    category: 'Tees',
+    inStock: true,
+    details: 'Made from premium cotton with an oversized fit, this tee is designed for comfort and style. Features high-quality screen printing that maintains its vibrancy wash after wash.',
+    care: 'Machine wash cold with like colors. Tumble dry low. Do not bleach. Iron inside out on low heat.',
+  },
+  'star-script-tee': {
+    id: 'star-script-tee',
+    name: 'Star Script Tee',
+    price: 29.99,
+    currency: '€',
+    description: 'Embrace the bold and the artistic with the \'AltanLabs Star Script Tee.\' This design combines a striking star graphic with an intricate, stylized \'AL\' script, creating a powerful visual statement. It\'s a perfect blend of streetwear edge and sophisticated design for those who stand out.',
+    images: {
+      front: starScriptTee,
+      back: starScriptTee,
+    },
+    sizes: ['S', 'M', 'L', 'XL'],
+    category: 'Tees',
+    inStock: true,
+    details: 'Made from premium cotton with an oversized fit, this tee is designed for comfort and style. Features high-quality screen printing that maintains its vibrancy wash after wash.',
+    care: 'Machine wash cold with like colors. Tumble dry low. Do not bleach. Iron inside out on low heat.',
+  },
+  'timeless-utility-tee': {
+    id: 'timeless-utility-tee',
+    name: 'Timeless Utility Tee',
+    price: 29.99,
+    currency: '€',
+    description: 'Seize the moment with the \'AltanLabs Timeless Utility Tee.\' Featuring a classic, monochromatic watch graphic and the impactful reminder, \'Your Time Is Valuable, Don\'t Waste It,\' this tee embodies precision, purpose, and the enduring value of time. Designed for those who appreciate classic style and a meaningful message.',
+    images: {
+      front: timelessUtilityTee,
+      back: timelessUtilityTee,
+    },
+    sizes: ['S', 'M', 'L', 'XL'],
     category: 'Tees',
     inStock: true,
     details: 'Made from premium cotton with an oversized fit, this tee is designed for comfort and style. Features high-quality screen printing that maintains its vibrancy wash after wash.',
