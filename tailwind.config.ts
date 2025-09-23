@@ -13,6 +13,14 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'serif': ['Instrument Serif', 'Georgia', 'serif'],
+        'sans': ['Helvetica Neue', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
+      },
+      boxShadow: {
+        'subtle': 'var(--shadow-subtle)',
+        'luxury': 'var(--shadow-luxury)',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
