@@ -1,5 +1,4 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 
 interface Product {
@@ -25,7 +24,10 @@ const ProductCard = ({ product }: ProductCardProps) => {
     navigate(`/product/${product.id}`);
   };
   return (
-    <Card className="group cursor-pointer overflow-hidden border-border/50 hover:shadow-subtle transition-all duration-300">
+    <Card 
+      className="group cursor-pointer overflow-hidden border-border/50 hover:shadow-subtle transition-all duration-300"
+      onClick={handleViewProduct}
+    >
       <CardContent className="p-0">
         {/* Product Images */}
         <div className="relative aspect-square overflow-hidden bg-secondary/20">
@@ -51,31 +53,20 @@ const ProductCard = ({ product }: ProductCardProps) => {
           </p>
           
           {/* Sizes Preview */}
-          <div className="flex items-center justify-between">
-            <div className="flex gap-1">
-              {product.sizes.slice(0, 3).map((size) => (
-                <span
-                  key={size}
-                  className="text-xs px-2 py-1 border border-border rounded text-muted-foreground"
-                >
-                  {size}
-                </span>
-              ))}
-              {product.sizes.length > 3 && (
-                <span className="text-xs px-2 py-1 text-muted-foreground">
-                  +{product.sizes.length - 3}
-                </span>
-              )}
-            </div>
-            
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={handleViewProduct}
-              className="hover:bg-primary hover:text-primary-foreground"
-            >
-              View
-            </Button>
+          <div className="flex gap-1">
+            {product.sizes.slice(0, 3).map((size) => (
+              <span
+                key={size}
+                className="text-xs px-2 py-1 border border-border rounded text-muted-foreground"
+              >
+                {size}
+              </span>
+            ))}
+            {product.sizes.length > 3 && (
+              <span className="text-xs px-2 py-1 text-muted-foreground">
+                +{product.sizes.length - 3}
+              </span>
+            )}
           </div>
         </div>
       </CardContent>
