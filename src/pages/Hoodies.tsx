@@ -5,7 +5,6 @@ import Cart from '@/components/Cart';
 import { useCart } from '@/contexts/CartContext';
 import hoodieFront from '@/assets/hoodie-front.png';
 import hoodieBack from '@/assets/hoodie-back.png';
-
 interface Product {
   id: string;
   name: string;
@@ -19,7 +18,6 @@ interface Product {
   sizes: string[];
   category: string;
 }
-
 const HOODIES: Product[] = [{
   id: 'one-builder-core-hoodie',
   name: 'One Builder Core Hoodie',
@@ -33,21 +31,18 @@ const HOODIES: Product[] = [{
   sizes: ['S', 'M', 'L', 'XL', 'XXL'],
   category: 'Hoodies'
 }];
-
 const Hoodies = () => {
   const [showCart, setShowCart] = useState(false);
-  const { state } = useCart();
-
+  const {
+    state
+  } = useCart();
   const handleCartClick = () => {
     setShowCart(true);
   };
-
   const handleCloseCart = () => {
     setShowCart(false);
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Header cartItemCount={state.itemCount} onCartClick={handleCartClick} />
       
       <main className="container mx-auto px-4 py-8">
@@ -57,8 +52,7 @@ const Hoodies = () => {
             Hoodies
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Premium hoodies designed for comfort and style
-          </p>
+        </p>
         </div>
 
         {/* Category Filter */}
@@ -72,26 +66,20 @@ const Hoodies = () => {
 
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {HOODIES.map(product => (
-            <ProductCard key={product.id} product={product} />
-          ))}
+          {HOODIES.map(product => <ProductCard key={product.id} product={product} />)}
         </div>
 
         {/* Empty State for Coming Soon */}
-        {HOODIES.length === 0 && (
-          <div className="text-center py-16">
+        {HOODIES.length === 0 && <div className="text-center py-16">
             <h3 className="font-serif text-2xl mb-4">Coming Soon</h3>
             <p className="text-muted-foreground">
               New hoodies are on their way. Stay tuned!
             </p>
-          </div>
-        )}
+          </div>}
       </main>
 
       {/* Cart Modal */}
       {showCart && <Cart onClose={handleCloseCart} />}
-    </div>
-  );
+    </div>;
 };
-
 export default Hoodies;
