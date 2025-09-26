@@ -22,11 +22,13 @@ const Header = ({ cartItemCount = 0, onCartClick }: HeaderProps) => {
       <div className="container flex h-16 items-center justify-between px-4">
         {/* Logo */}
         <div className="flex items-center">
-          <img 
-            src={altanLogo} 
-            alt="AltanShop" 
-            className="h-8 w-auto"
-          />
+          <a href="/" className="cursor-pointer">
+            <img 
+              src={altanLogo} 
+              alt="AltanShop" 
+              className="h-8 w-auto"
+            />
+          </a>
         </div>
 
         {/* Navigation */}
