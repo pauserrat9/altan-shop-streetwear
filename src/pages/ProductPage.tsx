@@ -11,6 +11,7 @@ import { useCart } from '@/contexts/CartContext';
 import { useToast } from '@/hooks/use-toast';
 import teeFront from '@/assets/tee-front.png';
 import teeBack from '@/assets/tee-back.png';
+import teeFrontNew from '@/assets/tee-front-new.png';
 import retroWaveTee from '@/assets/retro-wave-tee.png';
 import starScriptTee from '@/assets/star-script-tee.png';
 import timelessUtilityTee from '@/assets/timeless-utility-tee.png';
@@ -56,7 +57,7 @@ const PRODUCTS: { [key: string]: Product } = {
     currency: '€',
     description: 'Dive into the future with a nostalgic twist. The \'AltanLabs Retro Wave Tee\' features a vibrant, retro-futuristic logo and inspiring text that speaks to the evolution of ideas. Crafted for those who build, endure, and imagine beyond the ordinary, this tee is a testament to progress and timeless utility.',
     images: {
-      front: retroWaveTee,
+      front: teeFrontNew,
       back: retroWaveTee,
     },
     sizes: ['S', 'M', 'L', 'XL'],
@@ -72,7 +73,7 @@ const PRODUCTS: { [key: string]: Product } = {
     currency: '€',
     description: 'Embrace the bold and the artistic with the \'AltanLabs Star Script Tee.\' This design combines a striking star graphic with an intricate, stylized \'AL\' script, creating a powerful visual statement. It\'s a perfect blend of streetwear edge and sophisticated design for those who stand out.',
     images: {
-      front: starScriptTee,
+      front: teeFrontNew,
       back: starScriptTee,
     },
     sizes: ['S', 'M', 'L', 'XL'],
@@ -88,7 +89,7 @@ const PRODUCTS: { [key: string]: Product } = {
     currency: '€',
     description: 'Seize the moment with the \'AltanLabs Timeless Utility Tee.\' Featuring a classic, monochromatic watch graphic and the impactful reminder, \'Your Time Is Valuable, Don\'t Waste It,\' this tee embodies precision, purpose, and the enduring value of time. Designed for those who appreciate classic style and a meaningful message.',
     images: {
-      front: timelessUtilityTee,
+      front: teeFrontNew,
       back: timelessUtilityTee,
     },
     sizes: ['S', 'M', 'L', 'XL'],
