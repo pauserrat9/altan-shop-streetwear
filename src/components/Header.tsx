@@ -14,6 +14,7 @@ const Header = ({ cartItemCount = 0, onCartClick }: HeaderProps) => {
   const navItems = [
     { id: 'shop', label: 'Shop', href: '/', active: true },
     { id: 'tees', label: 'Tees', href: '/tees', active: true },
+    { id: 'hoodies', label: 'Hoodies', href: '/hoodies', active: true },
     { id: 'platform', label: 'Platform', href: 'https://altan.ai', external: true },
   ];
 

@@ -12,6 +12,8 @@ import { useToast } from '@/hooks/use-toast';
 import teeFront from '@/assets/tee-front.png';
 import teeBack from '@/assets/tee-back.png';
 import teeFrontNew from '@/assets/tee-front-new.png';
+import hoodieFront from '@/assets/hoodie-front.png';
+import hoodieBack from '@/assets/hoodie-back.png';
 import retroWaveTee from '@/assets/retro-wave-tee.png';
 import starScriptTee from '@/assets/star-script-tee.png';
 import timelessUtilityTee from '@/assets/timeless-utility-tee.png';
@@ -95,7 +97,23 @@ const PRODUCTS: { [key: string]: Product } = {
     sizes: ['S', 'M', 'L', 'XL'],
     category: 'Tees',
     inStock: true,
-    details: 'Made from premium cotton with an oversized fit, this tee is designed for comfort and style. Features high-quality screen printing that maintains its vibrancy wash after wash.',
+     details: 'Made from premium cotton with an oversized fit, this tee is designed for comfort and style. Features high-quality screen printing that maintains its vibrancy wash after wash.',
+    care: 'Machine wash cold with like colors. Tumble dry low. Do not bleach. Iron inside out on low heat.',
+  },
+  'one-builder-core-hoodie': {
+    id: 'one-builder-core-hoodie',
+    name: 'One Builder Core Hoodie',
+    price: 49.99,
+    currency: '€',
+    description: 'The One Builder Core Hoodie embodies the essence of Altan - collaboration, creativity, and the power of many minds working as one. Featuring a clean front with the iconic triangle logo and a bold back print with "many minds one builder" statement.',
+    images: {
+      front: hoodieFront,
+      back: hoodieBack,
+    },
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    category: 'Hoodies',
+    inStock: true,
+    details: 'Made from premium cotton blend with a soft fleece interior. Features a spacious front pocket and adjustable drawstring hood. Designed for ultimate comfort and warmth.',
     care: 'Machine wash cold with like colors. Tumble dry low. Do not bleach. Iron inside out on low heat.',
   },
 };
