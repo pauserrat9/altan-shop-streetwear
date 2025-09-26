@@ -32,12 +32,12 @@ const ProductCard = ({ product }: ProductCardProps) => {
           <img
             src={product.images.front}
             alt={`${product.name} - Front`}
-            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
+            className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
           />
           <img
             src={product.images.back}
             alt={`${product.name} - Back`}
-            className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
           />
         </div>
 
