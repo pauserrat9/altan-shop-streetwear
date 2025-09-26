@@ -48,9 +48,7 @@ const Hoodies = () => {
       <main className="container mx-auto px-4 py-8">
         {/* Hero Section */}
         <div className="mb-12 text-center">
-          <h1 className="font-serif text-4xl md:text-5xl font-semibold mb-4">
-            Hoodies
-          </h1>
+          <h1 className="font-serif text-4xl md:text-5xl font-semibold mb-4">AltanShop</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
         </p>
         </div>
