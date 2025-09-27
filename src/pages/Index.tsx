@@ -4,9 +4,9 @@ import altanLogo from '@/assets/altan-logo.png';
 const Index = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col items-center justify-center">
-      <div className="text-center space-y-12">
+      <div className="text-center space-y-16">
         {/* Logo */}
-        <div className="mb-16">
+        <div>
           <img 
             src={altanLogo} 
             alt="AltanShop" 
