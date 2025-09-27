@@ -15,17 +15,17 @@ const Index = () => {
         </div>
 
         {/* Navigation Options */}
-        <div className="space-y-8">
+        <div className="space-y-4">
           <Link 
             to="/tees"
-            className="block text-2xl font-light text-foreground hover:text-primary transition-colors duration-200"
+            className="block text-lg font-serif text-foreground hover:text-primary transition-colors duration-200"
           >
             shop tee's
           </Link>
           
           <Link 
             to="/hoodies"
-            className="block text-2xl font-light text-foreground hover:text-primary transition-colors duration-200"
+            className="block text-lg font-serif text-foreground hover:text-primary transition-colors duration-200"
           >
             shop hoodies
           </Link>
