@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ShoppingBag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLocation } from 'react-router-dom';
 import altanLogo from '@/assets/altan-logo.png';
 
 interface HeaderProps {
@@ -9,12 +10,20 @@ interface HeaderProps {
 }
 
 const Header = ({ cartItemCount = 0, onCartClick }: HeaderProps) => {
-  const [activeCategory, setActiveCategory] = useState('tees');
+  const location = useLocation();
+
+  // Helper function to determine if a nav item is active
+  const isActive = (href: string, id: string) => {
+    if (href === '/' && location.pathname === '/') return true;
+    if (href === '/tees' && (location.pathname === '/tees' || location.pathname === '/')) return true;
+    if (href === '/hoodies' && (location.pathname === '/hoodies' || location.pathname.includes('/product/') && location.pathname.includes('hoodie'))) return true;
+    return false;
+  };
 
   const navItems = [
-    { id: 'shop', label: 'Shop', href: '/', active: true },
-    { id: 'tees', label: 'Tees', href: '/tees', active: true },
-    { id: 'hoodies', label: 'Hoodies', href: '/hoodies', active: true },
+    { id: 'shop', label: 'Shop', href: '/' },
+    { id: 'tees', label: 'Tees', href: '/tees' },
+    { id: 'hoodies', label: 'Hoodies', href: '/hoodies' },
     { id: 'platform', label: 'Platform', href: 'https://altan.ai', external: true },
   ];
 
@@ -41,7 +50,7 @@ const Header = ({ cartItemCount = 0, onCartClick }: HeaderProps) => {
               target={item.external ? '_blank' : undefined}
               rel={item.external ? 'noopener noreferrer' : undefined}
               className={`text-sm font-medium transition-colors hover:text-primary ${
-                item.active
+                isActive(item.href, item.id)
                   ? 'text-foreground'
                   : 'text-muted-foreground hover:text-foreground'
               }`}
