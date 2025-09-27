@@ -17,6 +17,10 @@ import hoodieBack from '@/assets/hoodie-back.png';
 import retroWaveTee from '@/assets/retro-wave-tee.png';
 import starScriptTee from '@/assets/star-script-tee.png';
 import timelessUtilityTee from '@/assets/timeless-utility-tee.png';
+import manyMindsModel from '@/assets/many-minds-model.png';
+import retroWaveModel from '@/assets/retro-wave-model.png';
+import starScriptModel from '@/assets/star-script-model.png';
+import timelessUtilityModel from '@/assets/timeless-utility-model.png';
 
 interface Product {
   id: string;
@@ -27,6 +31,7 @@ interface Product {
   images: {
     front: string;
     back: string;
+    model: string;
   };
   sizes: string[];
   category: string;
@@ -45,6 +50,7 @@ const PRODUCTS: { [key: string]: Product } = {
     images: {
       front: teeFront,
       back: teeBack,
+      model: manyMindsModel,
     },
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     category: 'Tees',
@@ -61,6 +67,7 @@ const PRODUCTS: { [key: string]: Product } = {
     images: {
       front: teeFrontNew,
       back: retroWaveTee,
+      model: retroWaveModel,
     },
     sizes: ['S', 'M', 'L', 'XL'],
     category: 'Tees',
@@ -77,6 +84,7 @@ const PRODUCTS: { [key: string]: Product } = {
     images: {
       front: teeFrontNew,
       back: starScriptTee,
+      model: starScriptModel,
     },
     sizes: ['S', 'M', 'L', 'XL'],
     category: 'Tees',
@@ -93,6 +101,7 @@ const PRODUCTS: { [key: string]: Product } = {
     images: {
       front: teeFrontNew,
       back: timelessUtilityTee,
+      model: timelessUtilityModel,
     },
     sizes: ['S', 'M', 'L', 'XL'],
     category: 'Tees',
@@ -109,6 +118,7 @@ const PRODUCTS: { [key: string]: Product } = {
     images: {
       front: hoodieFront,
       back: hoodieBack,
+      model: hoodieFront, // Using front image as model placeholder for now
     },
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     category: 'Hoodies',
@@ -121,7 +131,7 @@ const PRODUCTS: { [key: string]: Product } = {
 const ProductPage = () => {
   const { productId } = useParams();
   const navigate = useNavigate();
-  const [selectedImage, setSelectedImage] = useState<'front' | 'back'>('front');
+  const [selectedImage, setSelectedImage] = useState<'front' | 'back' | 'model'>('front');
   const [selectedSize, setSelectedSize] = useState('');
   const [quantity, setQuantity] = useState(1);
   const [showCart, setShowCart] = useState(false);
@@ -147,6 +157,7 @@ const ProductPage = () => {
   const images = [
     { key: 'front', src: product.images.front, alt: `${product.name} - Front` },
     { key: 'back', src: product.images.back, alt: `${product.name} - Back` },
+    { key: 'model', src: product.images.model, alt: `${product.name} - Model` },
   ];
 
   const handleAddToCart = () => {
@@ -207,11 +218,11 @@ const ProductPage = () => {
             </div>
             
             {/* Image Thumbnails */}
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-3 gap-2">
               {images.map((image) => (
                 <button
                   key={image.key}
-                  onClick={() => setSelectedImage(image.key as 'front' | 'back')}
+                  onClick={() => setSelectedImage(image.key as 'front' | 'back' | 'model')}
                   className={`aspect-square bg-secondary/20 rounded-lg overflow-hidden border-2 transition-colors ${
                     selectedImage === image.key ? 'border-primary' : 'border-transparent hover:border-border'
                   }`}

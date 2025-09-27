@@ -9,6 +9,10 @@ import teeFrontNew from '@/assets/tee-front-new.png';
 import retroWaveTee from '@/assets/retro-wave-tee.png';
 import starScriptTee from '@/assets/star-script-tee.png';
 import timelessUtilityTee from '@/assets/timeless-utility-tee.png';
+import manyMindsModel from '@/assets/many-minds-model.png';
+import retroWaveModel from '@/assets/retro-wave-model.png';
+import starScriptModel from '@/assets/star-script-model.png';
+import timelessUtilityModel from '@/assets/timeless-utility-model.png';
 interface Product {
   id: string;
   name: string;
@@ -18,6 +22,7 @@ interface Product {
   images: {
     front: string;
     back: string;
+    model: string;
   };
   sizes: string[];
   category: string;
@@ -30,7 +35,8 @@ const PRODUCTS: Product[] = [{
   description: 'The Many Minds One Builder Tee represents the spirit of Altan — collaboration, creativity, and movement. Featuring a clean front with STAFF ONLY ©2025 branding, and a bold back print with the statement \'many minds, one builder\'. Made from premium cotton with an oversized fit, this tee is designed for comfort and style.',
   images: {
     front: teeFront,
-    back: teeBack
+    back: teeBack,
+    model: manyMindsModel
   },
   sizes: ['S', 'M', 'L', 'XL', 'XXL'],
   category: 'Tees'
@@ -42,7 +48,8 @@ const PRODUCTS: Product[] = [{
   description: 'Dive into the future with a nostalgic twist. The \'AltanLabs Retro Wave Tee\' features a vibrant, retro-futuristic logo and inspiring text that speaks to the evolution of ideas. Crafted for those who build, endure, and imagine beyond the ordinary, this tee is a testament to progress and timeless utility.',
   images: {
     front: teeFrontNew,
-    back: retroWaveTee
+    back: retroWaveTee,
+    model: retroWaveModel
   },
   sizes: ['S', 'M', 'L', 'XL'],
   category: 'Tees'
@@ -54,7 +61,8 @@ const PRODUCTS: Product[] = [{
   description: 'Embrace the bold and the artistic with the \'AltanLabs Star Script Tee.\' This design combines a striking star graphic with an intricate, stylized \'AL\' script, creating a powerful visual statement. It\'s a perfect blend of streetwear edge and sophisticated design for those who stand out.',
   images: {
     front: teeFrontNew,
-    back: starScriptTee
+    back: starScriptTee,
+    model: starScriptModel
   },
   sizes: ['S', 'M', 'L', 'XL'],
   category: 'Tees'
@@ -66,7 +74,8 @@ const PRODUCTS: Product[] = [{
   description: 'Seize the moment with the \'AltanLabs Timeless Utility Tee.\' Featuring a classic, monochromatic watch graphic and the impactful reminder, \'Your Time Is Valuable, Don\'t Waste It,\' this tee embodies precision, purpose, and the enduring value of time. Designed for those who appreciate classic style and a meaningful message.',
   images: {
     front: teeFrontNew,
-    back: timelessUtilityTee
+    back: timelessUtilityTee,
+    model: timelessUtilityModel
   },
   sizes: ['S', 'M', 'L', 'XL'],
   category: 'Tees'
