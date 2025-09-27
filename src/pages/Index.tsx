@@ -1,11 +1,35 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Link } from 'react-router-dom';
+import altanLogo from '@/assets/altan-logo.png';
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-background flex flex-col items-center justify-center">
+      <div className="text-center space-y-12">
+        {/* Logo */}
+        <div className="mb-16">
+          <img 
+            src={altanLogo} 
+            alt="AltanShop" 
+            className="h-12 w-auto mx-auto"
+          />
+        </div>
+
+        {/* Navigation Options */}
+        <div className="space-y-8">
+          <Link 
+            to="/tees"
+            className="block text-2xl font-light text-foreground hover:text-primary transition-colors duration-200"
+          >
+            shop tee's
+          </Link>
+          
+          <Link 
+            to="/hoodies"
+            className="block text-2xl font-light text-foreground hover:text-primary transition-colors duration-200"
+          >
+            shop hoodies
+          </Link>
+        </div>
       </div>
     </div>
   );
