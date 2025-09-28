@@ -5,6 +5,7 @@ import Cart from '@/components/Cart';
 import { useCart } from '@/contexts/CartContext';
 import hoodieFront from '@/assets/hoodie-front.png';
 import hoodieBack from '@/assets/hoodie-back.png';
+import hoodieModel from '@/assets/hoodie-model.png';
 interface Product {
   id: string;
   name: string;
@@ -14,6 +15,7 @@ interface Product {
   images: {
     front: string;
     back: string;
+    model: string;
   };
   sizes: string[];
   category: string;
@@ -26,7 +28,8 @@ const HOODIES: Product[] = [{
   description: 'The One Builder Core Hoodie embodies the essence of Altan - collaboration, creativity, and the power of many minds working as one. Featuring a clean front with the iconic triangle logo and a bold back print with "many minds one builder" statement.',
   images: {
     front: hoodieFront,
-    back: hoodieBack
+    back: hoodieBack,
+    model: hoodieModel
   },
   sizes: ['S', 'M', 'L', 'XL', 'XXL'],
   category: 'Hoodies'
