@@ -9,7 +9,7 @@ const Index = () => {
         </div>
 
         {/* Navigation Options */}
-        <div className="space-y-4">
+        <div className="space-y-2">
           <Link to="/tees" className="block text-lg font-serif text-foreground hover:text-primary hover:underline transition-colors duration-200">
             shop tee's
           </Link>
