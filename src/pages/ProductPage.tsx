@@ -214,7 +214,7 @@ const ProductPage = () => {
               <img
                 src={images.find(img => img.key === selectedImage)?.src}
                 alt={images.find(img => img.key === selectedImage)?.alt}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
               />
             </div>
             
@@ -231,7 +231,7 @@ const ProductPage = () => {
                   <img
                     src={image.src}
                     alt={image.alt}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                   />
                 </button>
               ))}
