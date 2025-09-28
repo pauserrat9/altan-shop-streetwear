@@ -14,6 +14,7 @@ import teeBack from '@/assets/tee-back.png';
 import teeFrontNew from '@/assets/tee-front-new.png';
 import hoodieFront from '@/assets/hoodie-front.png';
 import hoodieBack from '@/assets/hoodie-back.png';
+import hoodieModel from '@/assets/hoodie-model.png';
 import retroWaveTee from '@/assets/retro-wave-tee.png';
 import starScriptTee from '@/assets/star-script-tee.png';
 import timelessUtilityTee from '@/assets/timeless-utility-tee.png';
@@ -118,7 +119,7 @@ const PRODUCTS: { [key: string]: Product } = {
     images: {
       front: hoodieFront,
       back: hoodieBack,
-      model: hoodieFront, // Using front image as model placeholder for now
+      model: hoodieModel,
     },
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     category: 'Hoodies',
