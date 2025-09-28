@@ -18,14 +18,14 @@ const Index = () => {
         <div className="space-y-4">
           <Link 
             to="/tees"
-            className="block text-lg font-serif text-foreground hover:text-primary transition-colors duration-200"
+            className="block text-lg font-serif text-foreground hover:text-primary hover:underline transition-colors duration-200"
           >
             shop tee's
           </Link>
           
           <Link 
             to="/hoodies"
-            className="block text-lg font-serif text-foreground hover:text-primary transition-colors duration-200"
+            className="block text-lg font-serif text-foreground hover:text-primary hover:underline transition-colors duration-200"
           >
             shop hoodies
           </Link>
