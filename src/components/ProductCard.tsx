@@ -9,6 +9,7 @@ interface Product {
   images: {
     front: string;
     back: string;
+    model: string;
   };
   sizes: string[];
 }
@@ -32,8 +33,8 @@ const ProductCard = ({ product }: ProductCardProps) => {
         {/* Product Images */}
         <div className="relative aspect-square overflow-hidden bg-secondary/20">
           <img
-            src={product.images.front}
-            alt={`${product.name} - Front`}
+            src={product.images.model}
+            alt={`${product.name} - Model`}
             className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
           />
           <img
